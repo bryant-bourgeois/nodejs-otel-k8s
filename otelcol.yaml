@@ -80,7 +80,6 @@ spec:
               key: app.kubernetes.io/managed-by
               from: pod
       resourcedetection:
-        # remove the ones that you do not use
         detectors: [env, system]
         timeout: 2s
         override: false

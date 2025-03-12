@@ -1,5 +1,5 @@
 while [[ true ]]; do
-	curl localhost:36737/	
-	curl localhost:36737/rolldice	
+	curl localhost:64234/	
+	curl localhost:64234/rolldice	
 done
 

@@ -27,7 +27,7 @@ spec:
           - name: OTEL_EXPORTER_OTLP_ENDPOINT
             value: "http://$(HOST_IP):4318"
           - name: OTEL_RESOURCE_ATTRIBUTES
-            value: "team=foo,service.name=nodejs"
+            value: "team=bang,service.name=nodejs"
         ports:
         - containerPort: 8080
           name: node
