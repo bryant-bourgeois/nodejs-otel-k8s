@@ -20,11 +20,7 @@ spec:
         - key: datadog.container.tag.team
           action: upsert
           from_attribute: team
-      transform:
-        trace_statements:
-          - context: resource
-            statements:
-              - set(attributes["datadog.host.use_as_metadata"], true)
+          
       batch:
         send_batch_max_size: 100
         send_batch_size: 10
@@ -47,6 +43,6 @@ spec:
           exporters: [datadog]
         traces:
           receivers: [otlp]
-          processors: [resource, transform, batch]
+          processors: [resource, batch]
           exporters: [datadog]
 
